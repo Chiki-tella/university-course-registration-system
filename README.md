@@ -21,7 +21,7 @@ A Java web application for managing university course registrations, built with 
 | Java 17           | Core language                         |
 | Jakarta EE 10     | Servlet, JSP, JSTL                    |
 | Hibernate 6.4     | ORM (Object-Relational Mapping)       |
-| MySQL             | Database (can be replaced)            |
+| PostgreSQL             | Database (can be replaced)            |
 | Maven             | Build and dependency management       |
 | Tomcat 11         | Web server / Servlet container        |
 | Eclipse           | IDE (but works with any)               |
@@ -52,7 +52,7 @@ UniversityApp/
 
 - **Java JDK 17** or higher
 - **Apache Tomcat 11** (or any Jakarta EE 10 compatible server)
-- **MySQL** (or another database; adjust `hibernate.cfg.xml` accordingly)
+- **PostgreSQL** (or another database; adjust `hibernate.cfg.xml` accordingly)
 - **Maven** (or use Eclipse's embedded Maven)
 - **Eclipse IDE** (optional, but recommended for easy setup)
 
@@ -60,17 +60,17 @@ UniversityApp/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/university-course-registration.git
+git clone https://github.com/Chiki-tella/university-course-registration-system.git
 cd university-course-registration
 ```
 
 ### 2. Configure the Database
-Create a MySQL database, e.g., `university_db`.
+Create a PostgreSQL database, e.g., `university_db`.
 
 Update `src/main/resources/hibernate.cfg.xml` with your database URL, username, and password.
 
 ```xml
-<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/university_db?useSSL=false&amp;serverTimezone=UTC</property>
+<property name="hibernate.connection.url">jdbc:PostgreSQL://localhost:3306/university_db?useSSL=false&amp;serverTimezone=UTC</property>
 <property name="hibernate.connection.username">root</property>
 <property name="hibernate.connection.password">yourpassword</property>
 ```
@@ -109,15 +109,15 @@ http://localhost:8080/UniversityApp/
 ## Troubleshooting
 - **Facet version errors**: Ensure your project facets are set to **Dynamic Web Module 6.0** and **Java 17**. If stuck, edit `.settings/org.eclipse.wst.common.project.facet.core.xml` manually.
 - **Servlet not found**: Check that all servlet classes use `@WebServlet` with correct URL patterns and that Tomcat 11 is properly configured.
-- **Database connection issues**: Verify MySQL is running and credentials in `hibernate.cfg.xml` are correct.
+- **Database connection issues**: Verify PostgreSQL is running and credentials in `hibernate.cfg.xml` are correct.
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests for improvements, bug fixes, or additional features.
 
 ## License
-This project is licensed under the MIT License – see the [LICENSE](file:///C:/Users/user/eclipse-workspace-clean/UniversityApp/LICENSE) file for details.
+This project is licensed under the MIT License
 
 ## Author
-Christella – [@yourgithub](https://github.com/yourgithub)
+Christella – [@Chiki-tella](https://github.com/Chiki-tella)
 
-Project Link: [https://github.com/yourusername/university-course-registration](https://github.com/yourusername/university-course-registration)
+Project Link: [https://github.com/Chiki-tella/university-course-registration-system](https://github.com/Chiki-tella/university-course-registration-system.git)
