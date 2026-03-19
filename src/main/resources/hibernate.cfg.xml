@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        
+        <property name="hibernate.connection.username">postgres</property>
+
+        <property name="hibernate.connection.password">Munezero</property>
+        
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/university_db
+        </property>
+        
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <property name="show_sql">true</property>
+
+        <!-- List of annotated entity classes -->
+        <mapping class="com.university.model.Person"/>
+        <mapping class="com.university.model.Student"/>
+        <mapping class="com.university.model.Professor"/>
+        <mapping class="com.university.model.Course"/>
+        <mapping class="com.university.model.Enrollment"/>
+        <mapping class="com.university.model.Department"/>
+    </session-factory>
+</hibernate-configuration>
